@@ -1,6 +1,9 @@
+
 # ah-poc-prometheus
 
 Edit the `prometheus.yml`, then build the Docker image and optionally push it to Docker Hub.
+
+[![Build Status](https://travis-ci.com/zuhlke/ah-poc-prometheus.svg?branch=master)](https://travis-ci.com/zuhlke/ah-poc-prometheus) 
 
 ## Build and Run
 ```
