@@ -1,6 +1,6 @@
 
 applications:
   - name: ah-poc-prometheus
-    memory: 1G
+    memory: 64M
     docker:
       image: aimlesshammer/ah-poc-prometheus
