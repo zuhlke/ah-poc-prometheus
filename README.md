@@ -4,6 +4,12 @@ Edit the `prometheus.yml`, then build the Docker image and optionally push it to
 
 ## Build and Run
 ```
-docker build -t my-prometheus .
-docker run -p 9090:9090 my-prometheus
+docker build -t aimlesshammer/ah-poc-prometheus .
+docker run -p 9090:9090 aimlesshammer/ah-poc-prometheus
+```
+
+
+## Push To Docker Hub
+```
+docker push aimlesshammer/ah-poc-prometheus:latest
 ```
