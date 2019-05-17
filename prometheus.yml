@@ -17,18 +17,14 @@ rule_files:
 # A scrape configuration containing exactly one endpoint to scrape:
 # Here it's Prometheus itself.
 scrape_configs:
-  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  # The job name is added as a label `job=<job_name>` to any time series scraped from this config.
   - job_name: 'prometheus'
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
     static_configs:
-      - targets: ['docker.for.mac.localhost:9090' ]
+      - targets: ['ah-poc-prometheus.cfapps.io' ]
 
-  - job_name: 'docker'
-    static_configs:
-      - targets: ['docker.for.mac.host.internal:9323']
-
-  - job_name: 'spring-actuator'
+  - job_name: 'aimless-hammer-papi'
     metrics_path: '/actuator/prometheus'
     static_configs:
-      - targets: ['docker.for.mac.localhost:8080']
+      - targets: ['ah-poc-papi-springboot.cfapps.io']
