@@ -13,3 +13,8 @@ docker run -p 9090:9090 aimlesshammer/ah-poc-prometheus
 ```
 docker push aimlesshammer/ah-poc-prometheus:latest
 ```
+
+## Deploy to PCF
+```
+cf push ah-poc-prometheus --docker-image=aimlesshammer/ah-poc-prometheus:latest
+```
