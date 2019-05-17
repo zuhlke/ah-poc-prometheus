@@ -1,6 +1,12 @@
 
 applications:
-  - name: ah-poc-prometheus
-    memory: 64M
-    docker:
-      image: aimlesshammer/ah-poc-prometheus
+- name: ah-poc-prometheus
+  buildpacks:
+  - binary_buildpack
+  command: ./prometheus --web.listen-address=:8080
+  disk_quota: 1G
+  instances: 1
+  memory: 64M
+  routes:
+  - route: ah-poc-prometheus.cfapps.io
+  stack: cflinuxfs3

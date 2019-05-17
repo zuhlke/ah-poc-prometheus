@@ -9,18 +9,7 @@ Edit the `prometheus.yml`, then build the Docker image and optionally push it to
 ### Automatically
 Push to Git -- Travis will create build image and push to Docker Hub and then deploy to PCF
 
-### Manually
-```
-docker build -t aimlesshammer/ah-poc-prometheus .
-docker run -p 9090:9090 aimlesshammer/ah-poc-prometheus
-```
-
-### Push To Docker Hub
-```
-docker push aimlesshammer/ah-poc-prometheus:latest
-```
-
 ### Deploy to PCF
 ```
-cf push ah-poc-prometheus --docker-image=aimlesshammer/ah-poc-prometheus:latest
+cf push ah-poc-prometheus -f manifest.yml
 ```
