@@ -14,4 +14,4 @@ deploy:
   organization: $PCF_ORG
   space: $PCF_SPACE
   manifest: manifest.yml # (optional)  Defaults to manifest.yml.
-  app_name: ah-poc-papi-springboot # (optional)
+  app_name: ah-poc-prometheus # (optional)
