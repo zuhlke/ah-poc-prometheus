@@ -13,4 +13,4 @@ Push to Git -- Travis will create build image and push to Docker Hub and then de
 
 ### Deploy to PCF
 
-`cf push ah-poc-prometheus`
+`cf push`
