@@ -5,12 +5,14 @@ Edit the `prometheus.yml`, then build the Docker image and optionally push it to
 
 [![Build Status](https://travis-ci.com/zuhlke/ah-poc-prometheus.svg?branch=master)](https://travis-ci.com/zuhlke/ah-poc-prometheus) 
 
-## Build and Run
+## Pipeline
 
-### Automatically
+The travis pipeline will create a build image and push it to Docker Hub, then deploy the app to PCF.
 
-Push to Git -- Travis will create build image and push to Docker Hub and then deploy to PCF
-
-### Deploy to PCF
+## Deploy to PCF
 
 `cf push`
+
+## Build docker image locally
+
+`./docker-build-image`
