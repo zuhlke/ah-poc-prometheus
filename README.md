@@ -16,3 +16,7 @@ The travis pipeline will create a build image and push it to Docker Hub, then de
 ## Build docker image locally
 
 `./docker-build-image`
+
+## Run prometheus locally
+
+`./docker-run-locally`
