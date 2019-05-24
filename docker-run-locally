@@ -1,0 +1,9 @@
+docker image inspect prometheus > /dev/null
+exitcode=$?
+if [[ $exitcode ]]
+then
+  echo "Build the image first, using ./docker-build-image"
+  exit 1  
+else
+  docker run -d -p 9090:9090 prometheus
+fi
